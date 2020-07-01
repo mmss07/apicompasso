@@ -16,7 +16,7 @@ Essa API tem como finalidade fornecer serviço para as entidades Cliente e Cidad
 ## Script do BD
 
 Caso deseje após a instalação do banco de dados postgres efetue os seguites comandos:
-1. CREATE DATABASE lusiadas
+1. CREATE DATABASE compassodb
 
 2. CREATE TABLE CLIENTE (
     ID INTEGER PRIMARY KEY AUTO_INCREMENT,
