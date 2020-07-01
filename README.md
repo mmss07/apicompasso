@@ -60,13 +60,13 @@ Distribuído sob a licença  de MMSS S.A. Veja `LICENSE` para mais informações
 
 ## EndPoints da aplicação
 
-[SWAGGER - Spring Boot Compasso UOL]: http://localhost:8787/swagger-ui.html#
-[Cadastrar cidade]: POST -  http://localhost:8787/api/cidades
-[Cadastrar cliente]: POST - http://localhost:8787/api/clientes
-[Consultar cidade pelo nome]: GET - http://localhost:8787/api/clientes/nome/{nome}
-[Consultar cidade pelo estado]: GET - http://localhost:8787/api/cidades/uf/{uf}
-[Consultar cliente pelo nome]: GET - http://localhost:8787/api/clientes/nome/Maranhao
-[Consultar cliente pelo Id]: GET - http://localhost:8787/api/clientes/{id}
-[Remover cliente]: DELETE - http://localhost:8787/api/clientes/{id}
-[Alterar o nome do cliente]: PUT - http://localhost:8787/api/clientes/{id}
+1. [SWAGGER - Spring Boot Compasso UOL]: http://localhost:8787/swagger-ui.html#
+2. [Cadastrar cidade]: POST -  http://localhost:8787/api/cidades
+3. [Cadastrar cliente]: POST - http://localhost:8787/api/clientes
+4. [Consultar cidade pelo nome]: GET - http://localhost:8787/api/clientes/nome/{nome}
+5. [Consultar cidade pelo estado]: GET - http://localhost:8787/api/cidades/uf/{uf}
+6. [Consultar cliente pelo nome]: GET - http://localhost:8787/api/clientes/nome/Maranhao
+7. [Consultar cliente pelo Id]: GET - http://localhost:8787/api/clientes/{id}
+8. [Remover cliente]: DELETE - http://localhost:8787/api/clientes/{id}
+9. [Alterar o nome do cliente]: PUT - http://localhost:8787/api/clientes/{id}
 
