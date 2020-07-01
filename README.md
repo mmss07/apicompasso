@@ -44,7 +44,7 @@ Descreva como instalar todas as dependências para desenvolvimento e como rodar 
 
 ## Meta
 
-Marcelo Mauricio Souza da Silva – [@marcelomauricioss](https://github.com/mmss07/apicompasso) – marcelomauricio@hotmail.com
+Marcelo Mauricio Souza da Silva – [https://www.linkedin.com/in/full-stack-developer-marcelomauricio/](https://github.com/mmss07/apicompasso) – marcelomauricio@hotmail.com
 
 Distribuído sob a licença  de MMSS S.A. Veja `LICENSE` para mais informações.
 
