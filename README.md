@@ -40,7 +40,8 @@ CREATE TABLE CIDADE (
 
 ## Configuração para Desenvolvimento
 
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
+O projeto deve ser baixado pelo GIT e importado para sua IDE de preferência!
+
 
 ## Meta
 
