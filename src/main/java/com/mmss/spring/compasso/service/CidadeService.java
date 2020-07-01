@@ -39,7 +39,7 @@ public class CidadeService {
     	cidade.setUf(uf);
 		Example<Cidade> example = Example.of(cidade, matcher);
 		List<Cidade> listaCidades = cidades.findAll(example);
-		if(!StringUtil.isListNotNullNotEmpty(listaCidades)) {
+		if(StringUtil.isListNotNullNotEmpty(listaCidades)) {
 			return listaCidades;
 		}
 		
@@ -57,7 +57,7 @@ public class CidadeService {
     	cidade.setNome(uf);
 		Example<Cidade> example = Example.of(cidade, matcher);		
 		List<Cidade> listaCidades = cidades.findAll(example);
-		if(!StringUtil.isListNotNullNotEmpty(listaCidades)) {
+		if(StringUtil.isListNotNullNotEmpty(listaCidades)) {
 			return listaCidades;
 		}
 		

@@ -7,6 +7,7 @@ import java.util.List;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.TransactionSystemException;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.mmss.spring.compasso.dto.ClienteDTO;
@@ -60,13 +61,17 @@ public class ClienteService {
     }
     
     public void update( Cliente cliente ) throws ResponseStatusException{
-        clientes
-                .findById(cliente.getId())
-                .map( clienteExistente -> {                    
-                    clienteExistente.setNome(cliente.getNome());
-                    clientes.save(clienteExistente);
-                    return clienteExistente;                   
-                }).orElseThrow(() -> new RegraNegocioException("Cliente não encontrado") );
+    	try {			
+    		clientes
+    		.findById(cliente.getId())
+    		.map( clienteExistente -> {                    
+    			clienteExistente.setNome(cliente.getNome());
+    			clientes.save(clienteExistente);
+    			return clienteExistente;                   
+    		}).orElseThrow(() -> new RegraNegocioException("Cliente não encontrado") );		
+		}catch (TransactionSystemException  e) {
+			throw new RegraNegocioException("Nome do Cliente não pode ser vazio");
+		}
     }
         
     public void delete(Integer id ){

@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.mmss.spring.compasso.dto.ClienteDTO;
+import com.mmss.spring.compasso.dto.ClienteNomeDTO;
 import com.mmss.spring.compasso.model.Cliente;
 import com.mmss.spring.compasso.service.ClienteService;
 
@@ -87,7 +88,7 @@ public class ClienteController {
     @ResponseStatus(NO_CONTENT)
     @ApiOperation("Altera o nome de um cliente")
     public void update( @PathVariable Integer id,
-                        @RequestBody @Valid  @ApiParam("Update Cliente") ClienteDTO clienteDto ){
+                        @RequestBody @Valid  @ApiParam("Update Cliente") ClienteNomeDTO clienteDto ){
     	Cliente cliente = new Cliente();
     	cliente.setId(id);
     	cliente.setNome(clienteDto.getNome());
