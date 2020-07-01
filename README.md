@@ -15,8 +15,8 @@ Essa API tem como finalidade fornecer serviço para as entidades Cliente e Cidad
 
 ## Script do BD
 
-1. Caso deseje após a instalação do banco de dados postgres efetue os seguites comandos:
-CREATE TABLE CLIENTE (
+Caso deseje após a instalação do banco de dados postgres efetue os seguites comandos:
+1. CREATE TABLE CLIENTE (
     ID INTEGER PRIMARY KEY AUTO_INCREMENT,
     NOME VARCHAR(100),
     SEXO VARCHAR(1),
@@ -25,7 +25,7 @@ CREATE TABLE CLIENTE (
     CIDADE VARCHAR(60)
 );
 
-CREATE TABLE CIDADE (
+2. CREATE TABLE CIDADE (
     ID INTEGER PRIMARY KEY AUTO_INCREMENT,
     NOME VARCHAR(60),
     UF VARCHAR(2)
