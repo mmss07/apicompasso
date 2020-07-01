@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import com.mmss.spring.compasso.exception.RegraNegocioException;
 import com.mmss.spring.compasso.model.Cidade;
 import com.mmss.spring.compasso.repository.Cidades;
 import com.mmss.spring.compasso.util.StringUtil;
@@ -42,7 +43,7 @@ public class CidadeService {
 			return listaCidades;
 		}
 		
-		throw  new ResponseStatusException(HttpStatus.NOT_FOUND, "Cidade não encontrada");
+		throw  new RegraNegocioException("Cidade não encontrada");
 		
     }
     
@@ -60,7 +61,7 @@ public class CidadeService {
 			return listaCidades;
 		}
 		
-		throw  new ResponseStatusException(HttpStatus.NOT_FOUND, "Cidade não encontrada");
+		throw  new RegraNegocioException("Cidade não encontrada");
     }
     
     public Cidade save(Cidade cidade ){
@@ -77,7 +78,20 @@ public class CidadeService {
                     cidades.delete(cidade );
                     return cidade;
                 })
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Cidade não encontrada") );
+                .orElseThrow(() -> new RegraNegocioException("Cidade não encontrada") );
 
     }	
+	
+	public List<Cidade> findAll(){
+    	List<Cidade> listaCidade = cidades.findAll();
+        
+		if(StringUtil.isListNotNullNotEmpty(listaCidade)) {
+			return listaCidade;
+		}
+		
+		throw  new RegraNegocioException("Cidade não encontrada");
+        
+        
+    }
+	
 }

@@ -37,7 +37,7 @@ public class CidadeController {
     }
 
     @GetMapping("{id}")
-    @ApiOperation("Obter detalhes de um cidade")
+    @ApiOperation("Obter detalhes de uma cidade por id")
     @ApiResponses({
         @ApiResponse(code = 200, message = "Cidade encontrada"),
         @ApiResponse(code = 404, message = "Cidade não encontrada para o ID informado")
@@ -49,7 +49,7 @@ public class CidadeController {
     }
     
     @GetMapping("/uf/{uf}")
-    @ApiOperation("Obter detalhes de um cidade")
+    @ApiOperation("Obter detalhe(s) da(s) cidade(s) por UF")
     @ApiResponses({
         @ApiResponse(code = 200, message = "Cidade encontrada"),
         @ApiResponse(code = 404, message = "Cidade não encontrada para Uf informada")
@@ -61,14 +61,14 @@ public class CidadeController {
     }
     
     @GetMapping("/nome/{nome}")
-    @ApiOperation("Obter detalhes de um cidade")
+    @ApiOperation("Obter detalhe(s) da(s) cidade(s) por nome")
     @ApiResponses({
         @ApiResponse(code = 200, message = "Cidade encontrada"),
         @ApiResponse(code = 404, message = "Cidade não encontrada para o Nome informado")
     })
     public List<Cidade> getCidadeByNome(
             @PathVariable
-            @ApiParam("Id da cidade") String nome ){
+            @ApiParam("Nome da cidade") String nome ){
         return cidadeService.getCidadeByNome(nome);                
     }
     
@@ -85,9 +85,20 @@ public class CidadeController {
 
     @DeleteMapping("{id}")
     @ResponseStatus(NO_CONTENT)
-    @ApiOperation("Exclui um cidade")
+    @ApiOperation("Exclui uma cidade")
     public void delete( @PathVariable @ApiParam("Id da Cidade") Integer id ){
     	cidadeService.delete(id);
+    }
+    
+    @GetMapping()
+    @ApiOperation("Consulta todas as cidades")
+    @ApiResponses({
+        @ApiResponse(code = 200, message = "Cidade(s) listada(s) com sucesso"),
+        @ApiResponse(code = 400, message = "Erro de listagem")
+    })
+    public List<Cidade> findAll(){
+        List<Cidade> listaCidades = cidadeService.findAll();                     
+        return listaCidades; 
     }
     
 }

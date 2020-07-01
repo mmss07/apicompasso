@@ -2,7 +2,12 @@ package com.mmss.spring.compasso.exception;
 
 public class RegraNegocioException extends RuntimeException {
 
-    public RegraNegocioException(String message) {
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public RegraNegocioException(String message) {
         super(message);
     }
 }

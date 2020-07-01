@@ -35,7 +35,7 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo(){
         return new ApiInfoBuilder()
-                .title("MMSS - Spring Compasso")
+                .title("MMSS - Spring Boot Compasso UOL")
                 .description("Roteiro Entrevista Spring Boot - Compasso")
                 .version("1.0")
                 .contact(contact())
@@ -44,19 +44,8 @@ public class SwaggerConfig {
 
     private Contact contact(){
         return new Contact("Marcelo Mauricio Souza"
-                , "http://github.com/mmss07",
-                "marcelomauricio07@gmail.com");
-    }
-
-    private List<SecurityReference> defaultAuth(){
-        AuthorizationScope authorizationScope = new AuthorizationScope(
-                "global", "accessEverything");
-        AuthorizationScope[] scopes = new AuthorizationScope[1];
-        scopes[0] = authorizationScope;
-        SecurityReference reference = new SecurityReference("JWT", scopes);
-        List<SecurityReference> auths = new ArrayList<>();
-        auths.add(reference);
-        return auths;
+                , "https://github.com/mmss07/apicompasso",
+                "marcelomauricio@hotmail.com");
     }
 
 }
