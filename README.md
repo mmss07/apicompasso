@@ -70,5 +70,5 @@ Distribuído sob a licença  de MMSS S.A. Veja `LICENSE` para mais informações
 7. [Consultar cliente pelo Id]: GET - http://localhost:8787/api/clientes/{id}
 8. [Remover cliente]: DELETE - http://localhost:8787/api/clientes/{id}
 9. [Alterar o nome do cliente]: PUT - http://localhost:8787/api/clientes/{id}
-10.[Documentacao]: http://localhost:8787/swagger-ui.html# 
+10. [Documentacao]: http://localhost:8787/swagger-ui.html# 
 
