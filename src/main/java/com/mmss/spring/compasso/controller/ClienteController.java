@@ -52,11 +52,7 @@ public class ClienteController {
         @ApiResponse(code = 404, message = "Cliente não encontrado para o ID informado")
     })
 	public Cliente getClienteById(@PathVariable @ApiParam("Id do cliente") Integer id ){  
-    	 return clientes
-                 .findById(id)
-                 .orElseThrow(() ->
-                         new ResponseStatusException(HttpStatus.NOT_FOUND,
-                                 "Cliente não encontrado"));
+    	 return clienteService.findById(id);
     }
     
     @GetMapping("/nome/{nome}")
@@ -69,12 +65,7 @@ public class ClienteController {
             @PathVariable
             @ApiParam("Nome do cliente") String nome ) throws ResponseStatusException{
     	
-    	List<Cliente> findByNome = clienteService.findByNome(nome);
-    	if(!findByNome.isEmpty()) {
-    	  	return findByNome;
-    	}else {
-    		throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Cliente não encontrado");
-    	}
+    	return clienteService.findByNome(nome);    	
 	
     }
 

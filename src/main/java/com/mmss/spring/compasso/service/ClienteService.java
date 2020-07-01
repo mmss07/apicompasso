@@ -6,13 +6,11 @@ import java.util.List;
 
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.mmss.spring.compasso.dto.ClienteDTO;
 import com.mmss.spring.compasso.exception.RegraNegocioException;
-import com.mmss.spring.compasso.model.Cidade;
 import com.mmss.spring.compasso.model.Cliente;
 import com.mmss.spring.compasso.repository.Clientes;
 import com.mmss.spring.compasso.util.StringUtil;
@@ -77,8 +75,7 @@ public class ClienteService {
                 	clientes.delete(cliente );
                     return cliente;
                 })
-                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
-                        "Cliente não encontrado") );
+                .orElseThrow(() -> new RegraNegocioException("Cliente não encontrado") );
 
     }
     
@@ -106,7 +103,7 @@ public class ClienteService {
 			return listaClientes;
 		}
 		
-		throw  new ResponseStatusException(HttpStatus.NOT_FOUND, "Cliente não encontrado");
+		throw  new RegraNegocioException("Cliente não encontrado");
 
     }  
     
