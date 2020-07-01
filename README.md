@@ -13,7 +13,7 @@ Essa API tem como finalidade fornecer serviço para as entidades Cliente e Cidad
 	1. Cidades: nome e estado
 	2. Cliente: nome completo, sexo, data de nascimento, idade e cidade onde mora.
 
-# Script do BD
+## Script do BD
 
 1. Caso deseje após a instalação do banco de dados postgres efetue os seguites comandos:
 CREATE TABLE CLIENTE (
