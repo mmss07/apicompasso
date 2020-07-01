@@ -1,0 +1,93 @@
+package com.mmss.spring.compasso.controller;
+
+import static org.springframework.http.HttpStatus.CREATED;
+import static org.springframework.http.HttpStatus.NO_CONTENT;
+
+import java.util.List;
+
+import javax.validation.Valid;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.mmss.spring.compasso.model.Cidade;
+import com.mmss.spring.compasso.service.CidadeService;
+
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+
+@RestController
+@RequestMapping("/api/cidades")
+@Api("Api Cidades")
+public class CidadeController {
+
+    private CidadeService cidadeService;
+    
+    public CidadeController( CidadeService cidadeService ) {
+        this.cidadeService = cidadeService;
+    }
+
+    @GetMapping("{id}")
+    @ApiOperation("Obter detalhes de um cidade")
+    @ApiResponses({
+        @ApiResponse(code = 200, message = "Cidade encontrada"),
+        @ApiResponse(code = 404, message = "Cidade não encontrada para o ID informado")
+    })
+    public Cidade getCidadeById(
+            @PathVariable
+            @ApiParam("Id da cidade") Integer id ){
+        return cidadeService.getCidadeById(id);                
+    }
+    
+    @GetMapping("/uf/{uf}")
+    @ApiOperation("Obter detalhes de um cidade")
+    @ApiResponses({
+        @ApiResponse(code = 200, message = "Cidade encontrada"),
+        @ApiResponse(code = 404, message = "Cidade não encontrada para Uf informada")
+    })
+    public List<Cidade> getCidadeByUf(
+            @PathVariable
+            @ApiParam("Id da cidade") String uf ){
+        return cidadeService.getCidadeByUf(uf);                
+    }
+    
+    @GetMapping("/nome/{nome}")
+    @ApiOperation("Obter detalhes de um cidade")
+    @ApiResponses({
+        @ApiResponse(code = 200, message = "Cidade encontrada"),
+        @ApiResponse(code = 404, message = "Cidade não encontrada para o Nome informado")
+    })
+    public List<Cidade> getCidadeByNome(
+            @PathVariable
+            @ApiParam("Id da cidade") String nome ){
+        return cidadeService.getCidadeByNome(nome);                
+    }
+    
+    @PostMapping
+    @ResponseStatus(CREATED)
+    @ApiOperation("Salva uma nova cidade")
+    @ApiResponses({
+            @ApiResponse(code = 201, message = "Cidade salva com sucesso"),
+            @ApiResponse(code = 400, message = "Erro de validação")
+    })
+    public Cidade save( @RequestBody @Valid @ApiParam("Nova Cidade") Cidade cidade ){    	
+        return cidadeService.save(cidade);
+    }
+
+    @DeleteMapping("{id}")
+    @ResponseStatus(NO_CONTENT)
+    @ApiOperation("Exclui um cidade")
+    public void delete( @PathVariable @ApiParam("Id da Cidade") Integer id ){
+    	cidadeService.delete(id);
+    }
+    
+}
