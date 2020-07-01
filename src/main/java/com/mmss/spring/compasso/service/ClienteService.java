@@ -30,10 +30,10 @@ public class ClienteService {
     	if (!cliente.getSexo().equalsIgnoreCase("M") && !cliente.getSexo().equalsIgnoreCase("F")) {			
 			throw new RegraNegocioException("Valor para campo sexo - M ou F");
 		}
-    	
-    	if (!StringUtil.verificarIdadeComDataAniversario(cliente.getIdade(), cliente.getDataaniversario())) {		
-			throw new RegraNegocioException("Idade informada não é a mesma de nascimento!");
-		}
+//    	
+//    	if (!StringUtil.verificarIdadeComDataAniversario(cliente.getIdade(), cliente.getDataaniversario())) {		
+//			throw new RegraNegocioException("Idade informada não é a mesma de nascimento!");
+//		}
     	return clientes.save(cliente);
      
     }
