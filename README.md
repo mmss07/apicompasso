@@ -52,15 +52,15 @@ Distribuído sob a licença  de MMSS S.A. Veja `LICENSE` para mais informações
 
 ## Contributing
 
-1. Faça o _fork_ do projeto (<https://github.com/mmss07/apicompasso)>)
+1. Faça o dowload do projeto (<https://github.com/mmss07/apicompasso)>)
 2. Crie uma _branch_ para sua modificação (`git checkout -b feature/fooBar`)
 3. Faça o _commit_ (`git commit -am 'Add some fooBar'`)
-4. _Push_ (`git push origin feature/fooBar`)
+4. _Push_ (`git push origin`)
 5. Crie um novo _Pull Request_
 
 ## EndPoints da aplicação
 
-1. [SWAGGER - Api Compasso UOL]: http://localhost:8787/swagger-ui.html
+1. [Swegger - Api Compasso UOL]: http://localhost:8787/swagger-ui.html#
 2. [Cadastrar cidade]: POST -  http://localhost:8787/api/cidades
 3. [Cadastrar cliente]: POST - http://localhost:8787/api/clientes
 4. [Consultar cidade pelo nome]: GET - http://localhost:8787/api/clientes/nome/{nome}
