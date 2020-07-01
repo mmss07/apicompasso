@@ -60,7 +60,7 @@ Distribuído sob a licença  de MMSS S.A. Veja `LICENSE` para mais informações
 
 ## EndPoints da aplicação
 
-1. [SWAGGER - Spring Boot Compasso UOL]: http://localhost:8787/swagger-ui.html#
+1. [SWAGGER - Api Compasso UOL]: http://localhost:8787/swagger-ui.html
 2. [Cadastrar cidade]: POST -  http://localhost:8787/api/cidades
 3. [Cadastrar cliente]: POST - http://localhost:8787/api/clientes
 4. [Consultar cidade pelo nome]: GET - http://localhost:8787/api/clientes/nome/{nome}
