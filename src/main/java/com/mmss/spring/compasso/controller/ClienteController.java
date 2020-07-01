@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.mmss.spring.compasso.dto.ClienteDTO;
+import com.mmss.spring.compasso.dto.ClienteNomeDTO;
 import com.mmss.spring.compasso.model.Cliente;
 import com.mmss.spring.compasso.service.ClienteService;
 
