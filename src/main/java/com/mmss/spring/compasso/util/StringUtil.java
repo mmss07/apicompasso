@@ -1,16 +1,26 @@
 package com.mmss.spring.compasso.util;
 
+import static java.util.Calendar.YEAR;
+
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import static java.util.Calendar.YEAR;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StringUtil {
 	
 	public static boolean validaUf(String uf) {
-		List<String> ufs = Arrays.asList("RO,AC,AM,RR,PA,AP,TO,MA,PI,CE,RN,PB,PE,AL,SE,BA,MG,ES,RJ,SP,PR,SC,RS,MS,MT,GO,DF");
-    	return ufs.contains(uf); 
+
+		List<String> ufs = Stream.of("RO","AC","AM","RR","PA","AP","TO","MA","PI","CE","RN","PB","PE","AL","SE","BA","MG","ES","RJ","SP","PR","SC","RS","MS","MT","GO","DF").collect(Collectors.toList()); 
+				
+		for (String ufInformada : ufs) {
+			if (ufInformada.equalsIgnoreCase(uf)) {
+				return true;
+			}
+		}
+		return false;
     }
 	
 	public static boolean isListNotNullNotEmpty(List list) {
