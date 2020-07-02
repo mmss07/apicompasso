@@ -38,7 +38,7 @@ Caso deseje após a instalação do banco de dados postgres efetue os seguites c
 2. O sistema ira criar as tabelas na sua inicialização! 
 3. Esta sendo usado o database "compassodb" é necessário criar esse database no BD
 4. Esta sendo usado o schema "public" sendo desnecessário criar esse schema no BD
-5. A documentação da API pode ser vista na URL [SWAGGER - Spring Boot Compasso UOL]: http://localhost:8787/swagger-ui.html#
+5. A documentação da API pode ser vista na URL [SWAGGER - Spring Boot Compasso UOL]: http://localhost:8080/swagger-ui.html#
 6. Foi disponibilizado na raiz da api a colection "Compasso.postman_collection.json" para realização do import no Postman
 
 ## Configuração para Desenvolvimento
@@ -64,14 +64,14 @@ Distribuído sob a licença  de MMSS S.A. Veja `LICENSE` para mais informações
 
 ## EndPoints da aplicação
 
-1. Documentação: GET - http://localhost:8787/swagger-ui.html# 
-2. [Cadastrar cidade]: POST -  http://localhost:8787/api/cidades
-3. [Cadastrar cliente]: POST - http://localhost:8787/api/clientes
-4. [Consultar cidade pelo nome]: GET - http://localhost:8787/api/clientes/nome/{nome}
-5. [Consultar cidade pelo estado]: GET - http://localhost:8787/api/cidades/uf/{uf}
-6. [Consultar cliente pelo nome]: GET - http://localhost:8787/api/clientes/nome/Maranhao
-7. [Consultar cliente pelo Id]: GET - http://localhost:8787/api/clientes/{id}
-8. [Remover cliente]: DELETE - http://localhost:8787/api/clientes/{id}
-9. [Alterar o nome do cliente]: PUT - http://localhost:8787/api/clientes/{id}
+1. Documentação: GET - http://localhost:8080/swagger-ui.html# 
+2. [Cadastrar cidade]: POST -  http://localhost:8080/api/cidades
+3. [Cadastrar cliente]: POST - http://localhost:8080/api/clientes
+4. [Consultar cidade pelo nome]: GET - http://localhost:8080/api/clientes/nome/{nome}
+5. [Consultar cidade pelo estado]: GET - http://localhost:8080/api/cidades/uf/{uf}
+6. [Consultar cliente pelo nome]: GET - http://localhost:8080/api/clientes/nome/Maranhao
+7. [Consultar cliente pelo Id]: GET - http://localhost:8080/api/clientes/{id}
+8. [Remover cliente]: DELETE - http://localhost:8080/api/clientes/{id}
+9. [Alterar o nome do cliente]: PUT - http://localhost:8080/api/clientes/{id}
 
 
