@@ -40,6 +40,7 @@ Caso deseje após a instalação do banco de dados postgres efetue os seguites c
 4. Esta sendo usado o schema "public" sendo desnecessário criar esse schema no BD
 5. A documentação da API pode ser vista na URL [SWAGGER - Spring Boot Compasso UOL]: http://localhost:8080/swagger-ui.html#
 6. Foi disponibilizado na raiz da api a colection "Compasso.postman_collection.json" para realização do import no Postman
+7. Foi disponibilizado no HEROKU o deploy da aplicação para avaliação - https://mmss20200712.herokuapp.com/swagger-ui.html#/
 
 ## Configuração para Desenvolvimento
 
