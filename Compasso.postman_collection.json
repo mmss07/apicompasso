@@ -22,12 +22,12 @@
 					"raw": "{\n        \"uf\": \"PB\",\n        \"nome\": \"Joao Pessoa\"\n        \n    }"
 				},
 				"url": {
-					"raw": "http://localhost:8787/api/cidades",
+					"raw": "http://localhost:8080/api/cidades",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8787",
+					"port": "8080",
 					"path": [
 						"api",
 						"cidades"
@@ -53,31 +53,16 @@
 					"raw": "{\n        \"nome\": \"Mariza Mauricio da Silva\",\n        \"sexo\": \"T\",\n        \"dataaniversario\": \"1978-06-30T23:41:36.329+00:00\",\n        \"idade\": 0,\n        \"cidade\": \"Paulista\"\n    }"
 				},
 				"url": {
-					"raw": "http://localhost:8787/api/clientes",
+					"raw": "http://localhost:8080/api/clientes",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8787",
+					"port": "8080",
 					"path": [
 						"api",
 						"clientes"
 					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Consulta Clientes",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": ""
 				}
 			},
 			"response": []
@@ -144,12 +129,12 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8787/api/clientes/nome/Maranhao",
+					"raw": "http://localhost:8080/api/clientes/nome/Maranhao",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8787",
+					"port": "8080",
 					"path": [
 						"api",
 						"clientes",
@@ -170,12 +155,12 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8787/api/clientes/2",
+					"raw": "http://localhost:8080/api/clientes/2",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8787",
+					"port": "8080",
 					"path": [
 						"api",
 						"clientes",
@@ -227,12 +212,12 @@
 					"raw": "  {\n        \n        \"nome\": \"Marcio Mauricio da Silva\"\n        \n    }"
 				},
 				"url": {
-					"raw": "http://localhost:8787/api/clientes",
+					"raw": "http://localhost:8080/api/clientes",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "8787",
+					"port": "8080",
 					"path": [
 						"api",
 						"clientes"
