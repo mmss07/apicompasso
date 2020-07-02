@@ -53,7 +53,7 @@ public class ClienteService {
         
     }
   
-    public Cliente findById(Integer id){
+    public Cliente findById(int id){
     	 return clientes
                  .findById(id)
                  .orElseThrow(() ->
@@ -74,7 +74,7 @@ public class ClienteService {
 		}
     }
         
-    public void delete(Integer id ){
+    public void delete(int id ){
         clientes.findById(id)
                 .map( cliente -> {
                 	clientes.delete(cliente );

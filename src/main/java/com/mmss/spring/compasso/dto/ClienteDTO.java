@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ClienteDTO {
 	
-    private Integer id;
+    private int id;
     private String nome;
     private String sexo;
     private String dataaniversario;

@@ -46,7 +46,7 @@ public class ClienteController {
         @ApiResponse(code = 200, message = "Cliente encontrado"),
         @ApiResponse(code = 404, message = "Cliente não encontrado para o ID informado")
     })
-	public Cliente getClienteById(@PathVariable @ApiParam("Id do cliente") Integer id ){  
+	public Cliente getClienteById(@PathVariable @ApiParam("Id do cliente") int id ){  
     	 return clienteService.findById(id);
     }
     
@@ -79,7 +79,7 @@ public class ClienteController {
     @DeleteMapping("{id}")
     @ResponseStatus(NO_CONTENT)
     @ApiOperation("Exclui um cliente pelo Id")
-    public void delete( @PathVariable @ApiParam("Id do Cliente") Integer id ){
+    public void delete( @PathVariable @ApiParam("Id do Cliente") int id ){
         clienteService.delete(id);
 
     }
@@ -87,7 +87,7 @@ public class ClienteController {
     @PutMapping("{id}")
     @ResponseStatus(NO_CONTENT)
     @ApiOperation("Altera o nome de um cliente")
-    public void update( @PathVariable Integer id,
+    public void update( @PathVariable int id,
                         @RequestBody @Valid  @ApiParam("Update Cliente") ClienteNomeDTO clienteDto ){
     	Cliente cliente = new Cliente();
     	cliente.setId(id);

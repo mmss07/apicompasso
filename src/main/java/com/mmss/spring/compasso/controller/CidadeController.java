@@ -44,7 +44,7 @@ public class CidadeController {
     })
     public Cidade getCidadeById(
             @PathVariable
-            @ApiParam("Id da cidade") Integer id ){
+            @ApiParam("Id da cidade") int id ){
         return cidadeService.getCidadeById(id);                
     }
     
@@ -86,7 +86,7 @@ public class CidadeController {
     @DeleteMapping("{id}")
     @ResponseStatus(NO_CONTENT)
     @ApiOperation("Exclui uma cidade")
-    public void delete( @PathVariable @ApiParam("Id da Cidade") Integer id ){
+    public void delete( @PathVariable @ApiParam("Id da Cidade") int id ){
     	cidadeService.delete(id);
     }
     

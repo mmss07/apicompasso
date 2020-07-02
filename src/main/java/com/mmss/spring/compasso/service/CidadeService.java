@@ -22,7 +22,7 @@ public class CidadeService {
         this.cidades = cidades;
     }
     
-    public Cidade getCidadeById(Integer id ){
+    public Cidade getCidadeById(int id ){
         return cidades
                 .findById(id)
                 .orElseThrow(() ->
@@ -72,7 +72,7 @@ public class CidadeService {
         return cidades.save(cidade);
     }
 	
-	public void delete(Integer id ){
+	public void delete(int id ){
         cidades.findById(id)
                 .map( cidade -> {
                     cidades.delete(cidade );
