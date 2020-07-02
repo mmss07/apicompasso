@@ -4,9 +4,7 @@ import java.util.List;
 
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import org.springframework.web.server.ResponseStatusException;
 
 import com.mmss.spring.compasso.exception.RegraNegocioException;
 import com.mmss.spring.compasso.model.Cidade;
@@ -26,10 +24,13 @@ public class CidadeService {
         return cidades
                 .findById(id)
                 .orElseThrow(() ->
-                        new ResponseStatusException(HttpStatus.NOT_FOUND, "Cidade não encontrado"));
+                        new RegraNegocioException("Cidade não encontrado"));
     }
     
     public List<Cidade> getCidadeByUf(String uf ){
+    	if(!StringUtil.validaUf(uf)) {
+   		 	throw new RegraNegocioException("Uf inválida");
+    	}
     	ExampleMatcher matcher = ExampleMatcher
                 .matching()
                 .withIgnoreCase()
@@ -47,14 +48,14 @@ public class CidadeService {
 		
     }
     
-    public List<Cidade> getCidadeByNome(String uf ){
+    public List<Cidade> getCidadeByNome(String nome ){
     	ExampleMatcher matcher = ExampleMatcher
                 .matching()
                 .withIgnoreCase()
                 .withStringMatcher(
                         ExampleMatcher.StringMatcher.CONTAINING );
     	Cidade cidade  = new Cidade();
-    	cidade.setNome(uf);
+    	cidade.setNome(nome);
 		Example<Cidade> example = Example.of(cidade, matcher);		
 		List<Cidade> listaCidades = cidades.findAll(example);
 		if(StringUtil.isListNotNullNotEmpty(listaCidades)) {
@@ -66,7 +67,7 @@ public class CidadeService {
     
     public Cidade save(Cidade cidade ){
     	if(!StringUtil.validaUf(cidade.getUf())) {
-    		 throw new ResponseStatusException(HttpStatus.NO_CONTENT,"Uf inválida");
+    		 throw new RegraNegocioException("Uf inválida");
     	}
     	cidade.setUf(cidade.getUf().toUpperCase());
         return cidades.save(cidade);

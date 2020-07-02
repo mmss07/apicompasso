@@ -52,9 +52,10 @@ public class CidadeController {
     @ApiOperation("Obter detalhe(s) da(s) cidade(s) por UF")
     @ApiResponses({
         @ApiResponse(code = 200, message = "Cidade encontrada"),
+        @ApiResponse(code = 400, message = "Erro de validação"),
         @ApiResponse(code = 404, message = "Cidade não encontrada para Uf informada")
     })
-    public List<Cidade> getCidadeByUf(
+    public List<Cidade> getCidadeByUf (
             @PathVariable
             @ApiParam("Uf da cidade") String uf ){
         return cidadeService.getCidadeByUf(uf);                
@@ -68,7 +69,7 @@ public class CidadeController {
     })
     public List<Cidade> getCidadeByNome(
             @PathVariable
-            @ApiParam("Nome da cidade") String nome ){
+            @ApiParam("Nome da cidade") String nome ) {
         return cidadeService.getCidadeByNome(nome);                
     }
     
@@ -94,7 +95,7 @@ public class CidadeController {
     @ApiOperation("Consulta todas as cidades")
     @ApiResponses({
         @ApiResponse(code = 200, message = "Cidade(s) listada(s) com sucesso"),
-        @ApiResponse(code = 400, message = "Erro de listagem")
+        @ApiResponse(code = 404, message = "Não existem cidade(s)  cadastradas no banco")
     })
     public List<Cidade> findAll(){
         List<Cidade> listaCidades = cidadeService.findAll();                     
