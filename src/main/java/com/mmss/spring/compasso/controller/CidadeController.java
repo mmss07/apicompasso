@@ -56,7 +56,7 @@ public class CidadeController {
     })
     public List<Cidade> getCidadeByUf(
             @PathVariable
-            @ApiParam("Id da cidade") String uf ){
+            @ApiParam("Uf da cidade") String uf ){
         return cidadeService.getCidadeByUf(uf);                
     }
     
