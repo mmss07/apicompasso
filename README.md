@@ -48,7 +48,7 @@ O projeto deve ser baixado pelo GIT e importado para sua IDE de preferência!
 
 ## Meta
 
-Marcelo Mauricio Souza da Silva – [https://www.linkedin.com/in/full-stack-developer-marcelomauricio/] – marcelomauricio@hotmail.com
+Marcelo Mauricio Souza da Silva – [https://www.linkedin.com/in/full-stack-developer-marcelomauricio/](https://www.linkedin.com/in/full-stack-developer-marcelomauricio/) – marcelomauricio@hotmail.com
 
 Distribuído sob a licença  de MMSS S.A. Veja `LICENSE` para mais informações.
 
