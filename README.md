@@ -39,6 +39,7 @@ Caso deseje após a instalação do banco de dados postgres efetue os seguites c
 3. Esta sendo usado o database "compassodb" é necessário criar esse database no BD
 4. Esta sendo usado o schema "public" sendo desnecessário criar esse schema no BD
 5. A documentação da API pode ser vista na URL [SWAGGER - Spring Boot Compasso UOL]: http://localhost:8787/swagger-ui.html#
+6. Foi disponibilizado na raiz da api a colection "Compasso.postman_collection.json" para realização do import no Postman
 
 ## Configuração para Desenvolvimento
 
@@ -47,7 +48,7 @@ O projeto deve ser baixado pelo GIT e importado para sua IDE de preferência!
 
 ## Meta
 
-Marcelo Mauricio Souza da Silva – [https://www.linkedin.com/in/full-stack-developer-marcelomauricio/](https://github.com/mmss07/apicompasso) – marcelomauricio@hotmail.com
+Marcelo Mauricio Souza da Silva – [https://www.linkedin.com/in/full-stack-developer-marcelomauricio/] – marcelomauricio@hotmail.com
 
 Distribuído sob a licença  de MMSS S.A. Veja `LICENSE` para mais informações.
 
